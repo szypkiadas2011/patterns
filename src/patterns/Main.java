@@ -2,6 +2,7 @@ package patterns;
 
 import patterns.builder.Account;
 import patterns.builder.AccountBuilder;
+import patterns.singleton.App;
 
 import java.util.UUID;
 
@@ -17,5 +18,10 @@ public class Main
 				.build();
 
 		System.out.println("account = " + account);
+
+		// singleton
+		final App app = App.get();
+		app.init();
+		app.print();
 	}
 }
